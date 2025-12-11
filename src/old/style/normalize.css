@@ -1,0 +1,24 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 针对性地重置常见有默认边距的元素 */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, figure, blockquote, fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+:host {
+  line-height: 1.5;
+  font-family: --theme(
+    --default-font-family,
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji'
+  );
+}

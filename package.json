@@ -1,0 +1,27 @@
+{
+  "name": "semi-vue",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "rsbuild dev",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview"
+  },
+  "author": "1019954708@qq.com",
+  "license": "ISC",
+  "dependencies": {
+    "@kousum/semi-ui-vue": "^2.78.4",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.6.13",
+    "@rsbuild/plugin-babel": "^1.0.6",
+    "@rsbuild/plugin-vue": "^1.2.0",
+    "@rsbuild/plugin-vue-jsx": "^1.1.1",
+    "@tailwindcss/postcss": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}

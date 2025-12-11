@@ -1,0 +1,19 @@
+# Local
+.DS_Store
+*.local
+*.log*
+.npmrc
+.env
+
+# Dist
+node_modules
+dist/
+package-lock.json
+deno.lock
+bun.lock
+bun.lockb
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
