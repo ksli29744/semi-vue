@@ -1,4 +1,4 @@
-semi-design的vue3版本，官网文档：https://semi.design/zh-CN/start/getting-started
+字节跳动semi-design的vue3版本，官网文档：https://semi.design/zh-CN/start/getting-started
 
 增强的功能：
 input组件可使用v-model
@@ -10,7 +10,7 @@ input组件可使用v-model
 Install the dependencies:
 
 ```bash
-pnpm install
+bun install
 ```
 
 ## Get started
@@ -18,17 +18,17 @@ pnpm install
 Start the dev server:
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 Build the app for production:
 
 ```bash
-pnpm build
+npm run build
 ```
 
 Preview the production build locally:
 
 ```bash
-pnpm preview
+npm run preview
 ```
