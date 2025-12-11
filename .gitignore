@@ -6,8 +6,8 @@
 .env
 
 # Dist
-node_modules
 dist/
+node_modules
 package-lock.json
 deno.lock
 bun.lock
