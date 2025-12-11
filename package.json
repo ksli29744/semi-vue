@@ -11,6 +11,11 @@
   },
   "author": "1019954708@qq.com",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ksli29744/semi-vue.git"
+  },
+  "homepage": "https://github.com/ksli29744/semi-vue",
   "dependencies": {
     "@kousum/semi-ui-vue": "^2.78.4",
     "vue": "^3.5.13",

@@ -1,4 +1,4 @@
-semi-design的vue版本，官网文档：https://semi.design/zh-CN/start/getting-started
+semi-design的vue3版本，官网文档：https://semi.design/zh-CN/start/getting-started
 
 增强的功能：
 input组件可使用v-model
