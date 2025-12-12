@@ -1,7 +1,8 @@
-字节跳动semi-design的vue3版本，官网文档：https://semi.design/zh-CN/start/getting-started
+字节跳动semi-design的vue3版本，额外增加的组件：
+- Loading，可以函数的方式调用
+- sv-input，可使用v-model
 
-增强的功能：
-input组件可使用v-model
+官网文档：https://semi.design/zh-CN/start/getting-started
 
 # Rsbuild project
 
