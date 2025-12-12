@@ -11,7 +11,7 @@ import {createApp} from 'vue'
 import LoadingCom from './index.vue'
 
 class Loading {
-  constructor(config) {
+  constructor(config = {delay: 0}) {
     this.loadingInstance = createApp(LoadingCom, config).mount(document.createElement('div'))
 
     this.timer = setTimeout(() => {

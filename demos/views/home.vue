@@ -17,10 +17,7 @@ function onChange(value) {
 }
 
 function showLoading() {
-  const loading = new SvLoading({
-    // size: 'large',
-    tip: '上传中',
-  })
+  const loading = new SvLoading({delay: 1000})
   setTimeout(() => {
     loading.hide()
   }, 10000)
