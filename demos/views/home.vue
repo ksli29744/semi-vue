@@ -4,12 +4,12 @@
 
     <Button @click="testLoading">按钮</Button>
 
-    <sv-input v-model="input" size="small" class="mt-8" @change="onChange" />
+    <sv-input v-model="input" class="mt-8" @change="onChange" />
 
     <sv-loading tip="加载中"  />
 
     <div style="width: 500px" class="mt-96">
-      <Spin tip="I am loading...">
+      <Spin tip="加载中">
         I am loading...
       </Spin>
     </div>

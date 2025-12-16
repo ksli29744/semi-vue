@@ -1,4 +1,7 @@
-@import "tailwindcss";
+@layer tailwind-theme, tailwind-base, semi, tailwind-components, tailwind-utilities;
+@import "tailwindcss/theme.css" layer(tailwind-theme);
+@import "tailwindcss/preflight.css" layer(tailwind-base);
+@import "tailwindcss/utilities.css" layer(tailwind-utilities);
 
 @theme {
   --spacing: .01rem;
