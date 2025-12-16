@@ -13,21 +13,36 @@ const attrs = useAttrs()
 
 <style scoped>
 .loading {
-  position: fixed;
+  /* position: fixed;
   z-index: 1040;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  display: flex;
+  bottom: 0; */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.semi-spin :deep([x-semi-prop=tip]) {
-  width: max-content;
+.loading :deep(.semi-spin) {
+  display: inline-flex;
+  width: auto;
+  height: auto;
+}
+
+.loading :deep(.semi-spin-wrapper) {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
+  top: 0;
+  transform: none;
+}
+
+.loading :deep([x-semi-prop=tip]) {
+  width: max-content;
+  /* position: relative;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
 }
 </style>
