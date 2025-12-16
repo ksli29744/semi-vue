@@ -1,5 +1,5 @@
 <template>
-  <div class="loading">
+  <div class="sv-loading">
 		<Spin v-bind="attrs" />
 	</div>
 </template>
@@ -12,7 +12,7 @@ const attrs = useAttrs()
 </script>
 
 <style scoped>
-.loading {
+.sv-loading {
   /* position: fixed;
   z-index: 1040;
   top: 0;
@@ -24,13 +24,13 @@ const attrs = useAttrs()
   justify-content: center;
 }
 
-.loading :deep(.semi-spin) {
+.sv-loading :deep(.semi-spin) {
   display: inline-flex;
   width: auto;
   height: auto;
 }
 
-.loading :deep(.semi-spin-wrapper) {
+.sv-loading :deep(.semi-spin-wrapper) {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +39,7 @@ const attrs = useAttrs()
   transform: none;
 }
 
-.loading :deep([x-semi-prop=tip]) {
+.sv-loading :deep([x-semi-prop=tip]) {
   width: max-content;
   /* position: relative;
   left: 50%;

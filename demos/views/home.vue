@@ -6,13 +6,13 @@
 
     <sv-input v-model="input" class="mt-8" @change="onChange" />
 
-    <sv-loading tip="加载中"  />
+    <sv-loading />
 
-    <div style="width: 500px" class="mt-96">
+    <!-- <div style="width: 500px" class="mt-96">
       <Spin tip="加载中">
         I am loading...
       </Spin>
-    </div>
+    </div> -->
     
   </div>
 </template>
