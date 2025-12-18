@@ -2,17 +2,21 @@
   与Spin相同的属性直接透传到Spin组件
 -->
 <template>
-  <div v-if="visible" class="sv-loading" :class="{fullscreen}" :style="{background}">
+  <div v-if="loading" v-show="visible" class="sv-loading" :class="{fullscreen}" :style="{background}">
 		<Spin :size="size" :tip="tip" />
 	</div>
 </template>
 
 <script setup>
 import {Spin} from '@kousum/semi-ui-vue'
-import {useAttrs} from 'vue'
+import {ref, watch, useAttrs} from 'vue'
 
 const attrs = useAttrs()
 const props = defineProps({
+  loading: { //是否处于加载状态
+    type: Boolean,
+    default: true,
+  },
   delay: {
     type: Number,
     default: 0,
@@ -30,7 +34,19 @@ const props = defineProps({
   },
   background: String,
 })
+const visible = ref(false)
+let timer = null
 
+watch(() => props.loading, val => {
+  if (val) {
+    timer = setTimeout(() => {
+      visible.value = true
+    }, props.delay)
+  } else {
+    visible.value = false
+    clearTimeout(timer)
+  }
+}, {immediate: true})
 </script>
 
 <style scoped>
