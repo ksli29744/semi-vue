@@ -11,12 +11,15 @@ import {createApp} from 'vue'
 import LoadingCom from './index.vue'
 
 class Loading {
-  constructor(config = {delay: 0}) {
-    this.loadingInstance = createApp(LoadingCom, config).mount(document.createElement('div'))
+  constructor(config = {}) {
+    if (!config.delay) config.delay = 0
+    if (!config.fullscreen) config.fullscreen = true
 
-    this.timer = setTimeout(() => {
-      document.body.appendChild(this.loadingInstance.$el)
-    }, config.delay)
+    this.loadingInstance = createApp(LoadingCom, config).mount(document.createElement('div'))
+    document.body.appendChild(this.loadingInstance.$el)
+    // this.timer = setTimeout(() => {
+    //   document.body.appendChild(this.loadingInstance.$el)
+    // }, config.delay)
   }
 
   hide() {

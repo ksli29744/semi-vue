@@ -1,6 +1,9 @@
+<!--
+  与Spin相同的属性直接透传到Spin组件
+-->
 <template>
-  <div class="sv-loading">
-		<Spin v-bind="attrs" />
+  <div v-if="visible" class="sv-loading" :class="{fullscreen}" :style="{background}">
+		<Spin :size="size" :tip="tip" />
 	</div>
 </template>
 
@@ -9,19 +12,41 @@ import {Spin} from '@kousum/semi-ui-vue'
 import {useAttrs} from 'vue'
 
 const attrs = useAttrs()
+const props = defineProps({
+  delay: {
+    type: Number,
+    default: 0,
+  },
+  size: {
+    type: String,
+    default: 'middle',
+  },
+  tip: {
+    type: String,
+  },
+  fullscreen: {
+    type: Boolean,
+    default: false,
+  },
+  background: String,
+})
+
 </script>
 
 <style scoped>
 .sv-loading {
-  /* position: fixed;
-  z-index: 1040;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; */
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.sv-loading.fullscreen {
+  position: fixed;
+  z-index: 1090;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .sv-loading :deep(.semi-spin) {
