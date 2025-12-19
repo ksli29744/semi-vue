@@ -2,7 +2,7 @@
   与Spin相同的属性直接透传到Spin组件
 -->
 <template>
-  <div v-if="loading" v-show="visible" class="sv-loading" :class="{fullscreen}" :style="{background}">
+  <div class="sv-loading" :class="{fullscreen}" :style="{background}">
 		<Spin :size="size" :tip="tip" />
 	</div>
 </template>
@@ -13,40 +13,40 @@ import {ref, watch, useAttrs} from 'vue'
 
 const attrs = useAttrs()
 const props = defineProps({
-  loading: { //是否处于加载状态
-    type: Boolean,
-    default: true,
-  },
-  delay: {
-    type: Number,
-    default: 0,
-  },
+  // loading: { //是否处于加载状态
+  //   type: Boolean,
+  //   default: true,
+  // },
+  // delay: { //延迟显示
+  //   type: Number,
+  //   default: 0,
+  // },
   size: {
     type: String,
     default: 'middle',
   },
-  tip: {
+  tip: { //提示文案
     type: String,
   },
-  fullscreen: {
+  fullscreen: { //是否全屏显示
     type: Boolean,
     default: false,
   },
-  background: String,
+  background: String, //loading背景样式
 })
 const visible = ref(false)
 let timer = null
 
-watch(() => props.loading, val => {
-  if (val) {
-    timer = setTimeout(() => {
-      visible.value = true
-    }, props.delay)
-  } else {
-    visible.value = false
-    clearTimeout(timer)
-  }
-}, {immediate: true})
+// watch(() => props.loading, val => {
+//   if (val) {
+//     timer = setTimeout(() => {
+//       visible.value = true
+//     }, props.delay)
+//   } else {
+//     visible.value = false
+//     clearTimeout(timer)
+//   }
+// }, {immediate: true})
 </script>
 
 <style scoped>
